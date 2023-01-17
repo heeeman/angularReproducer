@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## mode of operation
 
-I have a App in 2 operation modes. 
+I have an App in 2 operation modes. 
 First as a normal Angular App for internal use. 
 Second as a embedded App in a CMS system. In this case, the cms emulats the index.html of the Angular App.
 
