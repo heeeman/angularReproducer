@@ -13,8 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/reproducer",
+            "outputPath": "serverContent/standalone",
             "index": "src/index.html",
+
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
@@ -62,6 +63,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "servePath": "standalone/app/"
+          },
           "configurations": {
             "production": {
               "browserTarget": "reproducer:build:production"

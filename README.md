@@ -2,26 +2,35 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
-## Development server
+## mode of operation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I have a App in 2 operation modes. 
+First as a normal Angular App for internal use. 
+Second as a embedded App in a CMS system. In this case, the cms emulats the index.html of the Angular App.
 
-## Code scaffolding
+## challange
+In the cms mode, i haven't found a way to lazy load the chunks. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build --output-hashing none` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## start test server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npx http-server ./serverContent` to start the test server. The test server will run the angular app in 2 modes:
+- default standalone app
+- cms mode
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Links
+(first start test server)
 
-## Further help
+Normal mode for an Angular app by fix path: http://localhost:8080/standalone/other-page
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular embedded in a CMS Page: http://localhost:8080/cms/dynamic/path/angularembedded/
+
+Server root: http://localhost:8080
+
+
+
